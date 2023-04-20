@@ -9,8 +9,15 @@
 <body>
     <h1>Welcome to PetFax</h1>
     {% for pet in pets %}
+    <div>
         <h2>{{pet.pet_name}}</h2>
         <img src="{{pet.pet_photo}}" alt="Photo of pet" />
+        <!-- Need link for pets id -->
+        <a href="/pets/{{pet.pet_id}}">Pet in question</a>
+    </div>
     {% endfor %}
+    <p>
+        <a href="/">Go back</a>
+    </p>
 </body>
 </html>

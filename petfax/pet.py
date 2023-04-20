@@ -10,6 +10,7 @@ def index():
     return render_template('index.html', pets=pets)
 
 # https://flask.palletsprojects.com/en/2.0.x/quickstart/#variable-rules 
-@bp.route('/<pet_id>')
-def show_pet(pet_id):
-    return render_template('show.html', pets =pets)
+@bp.route('/<int:id>')
+def show_pet(id):
+    pet = pets[id-1]
+    return render_template('show.html', pet =pet)
