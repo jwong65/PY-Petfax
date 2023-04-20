@@ -9,11 +9,16 @@
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 </head>
 <body>
-    <form action="/facts" method="POST">
-        <label name="fact">Add Facts</label>
-        <input type="text" >
-        <input type="submit"> 
-     </form>
+    <div class="facts-container">
+        <form action="/facts" method="POST">
+            <label for="submitter"><H2>Name</H2></label>
+            <input name="submitter" type="text">
+            <br/>
+            <label for="fact"><H2>Fact</H2></label>
+            <textarea name="fact"></textarea>
+            <br/>
+            <input type="submit" value="Submit the Fact">
+        </form>
      
 </body>
 </html>
